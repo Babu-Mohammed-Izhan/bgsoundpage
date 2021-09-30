@@ -1,7 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 const AudioPlayer = ({ src }) => {
+  const [isplaying, setisplaying] = useState(false);
   const audioRef = useRef();
+
+  const soundtoggle = () => {
+    if (isplaying) {
+      setisplaying(false);
+      audioRef.current.pause();
+    } else {
+      setisplaying(true);
+      audioRef.current.play();
+    }
+  };
 
   return (
     <div className="audio-player">
@@ -10,11 +21,16 @@ const AudioPlayer = ({ src }) => {
         preload="none"
         autobuffer="true"
         style={{ display: "none" }}
-        loop="true"
+        loop={true}
         ref={audioRef}
         src={src}
       ></audio>
-      <button onClick={() => audioRef.current.play()}>Play</button>
+      <button
+        onClick={() => soundtoggle()}
+        className={isplaying ? `Pause` : `Play`}
+      >
+        {isplaying ? `Pause` : `Play`}
+      </button>
     </div>
   );
 };
