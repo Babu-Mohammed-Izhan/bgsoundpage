@@ -1,9 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .App {
+  min-height: 100vh;
+  min-width: auto;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(192, 124, 255);
+}
+
+.navbar {
+  padding-top: 30px;
+}
+.audios_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  min-width: auto;
+  min-height: 80vh;
   background-color: rgb(192, 124, 255);
 }
 
@@ -11,12 +22,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 80vh;
+  background-color: rgb(192, 124, 255);
 }
 
 .icon {
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
   cursor: pointer;
   color: rgb(255, 255, 255);
+}
+
+.slider-container {
+  margin-top: 30px;
+}
+
+.slider {
+  background: #fff;
+  appearance: none;
+  outline: none;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(168, 75, 255);
+  cursor: pointer;
 }
 
 .icon::selection {

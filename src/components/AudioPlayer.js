@@ -15,7 +15,7 @@ const AudioPlayer = ({ src, Icon }) => {
   };
 
   return (
-    <div className="audio-player">
+    <div className="audio-player col-6 col-sm-6 col-md-4 col-xl-3">
       <audio
         controls="controls"
         preload="none"
@@ -25,11 +25,21 @@ const AudioPlayer = ({ src, Icon }) => {
         ref={audioRef}
         src={src}
       ></audio>
-      <div
-        onClick={() => soundtoggle()}
-        className={` icon ${isplaying ? "Pause" : "Play"}`}
-      >
-        <img src={Icon} alt="icon" />
+      <div className={` icon ${isplaying ? "Pause" : "Play"}`}>
+        <img src={Icon} alt="icon" onClick={() => soundtoggle()} />
+        {isplaying ? (
+          <div className="slider-container">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="75"
+              className="slider"
+            />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
