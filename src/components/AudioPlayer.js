@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-const AudioPlayer = ({ src }) => {
+const AudioPlayer = ({ src, Icon }) => {
   const [isplaying, setisplaying] = useState(false);
   const audioRef = useRef();
 
@@ -25,12 +25,12 @@ const AudioPlayer = ({ src }) => {
         ref={audioRef}
         src={src}
       ></audio>
-      <button
+      <div
         onClick={() => soundtoggle()}
-        className={isplaying ? `Pause` : `Play`}
+        className={` icon ${isplaying ? "Pause" : "Play"}`}
       >
-        {isplaying ? `Pause` : `Play`}
-      </button>
+        <img src={Icon} alt="icon" />
+      </div>
     </div>
   );
 };
