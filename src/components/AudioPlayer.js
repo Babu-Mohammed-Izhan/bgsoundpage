@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 const AudioPlayer = ({ src, Icon }) => {
   const [isplaying, setisplaying] = useState(false);
+  const [volume, setvolume] = useState(0.75);
   const audioRef = useRef();
 
   const soundtoggle = () => {
@@ -12,6 +13,11 @@ const AudioPlayer = ({ src, Icon }) => {
       setisplaying(true);
       audioRef.current.play();
     }
+  };
+
+  const handleVolume = (e) => {
+    setvolume(e.target.value / 100);
+    audioRef.current.volume = volume;
   };
 
   return (
@@ -33,7 +39,9 @@ const AudioPlayer = ({ src, Icon }) => {
               type="range"
               min="1"
               max="100"
-              value="75"
+              onChange={handleVolume}
+              onInput={handleVolume}
+              value={volume * 100}
               className="slider"
             />
           </div>

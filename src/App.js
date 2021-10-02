@@ -7,7 +7,6 @@ import fire from "./logos/fire.svg";
 import people from "./logos/people.svg";
 import thunder from "./logos/thunder.svg";
 import waves from "./logos/waves.svg";
-import whitenoise from "./logos/whitenoise.svg";
 import wind from "./logos/wind.svg";
 import Navigation from "./components/Navigation";
 
@@ -49,19 +48,17 @@ function App() {
           />
           <AudioPlayer
             src={
-              "https://st2.asoftmurmur.com/assets/p/content/fire/main-bird.mp4"
+              "https://st3.asoftmurmur.com/assets/p/content/birds/main-birds.ogg"
             }
             Icon={bird}
           />
-          <AudioPlayer
-            src={
-              "https://st2.asoftmurmur.com/assets/p/content/fire/main-crickets.mp4"
-            }
+          {/* <AudioPlayer
+            src={"https://cdn2.noisli.com/hls/forest/hls_3.ts"}
             Icon={crickets}
-          />
+          /> */}
           <AudioPlayer
             src={
-              "https://st2.asoftmurmur.com/assets/p/content/fire/main-people.mp4"
+              "https://st3.asoftmurmur.com/assets/p/content/people/main-people.mp4"
             }
             Icon={people}
           />
