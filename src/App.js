@@ -2,7 +2,7 @@ import "./App.css";
 import AudioPlayer from "./components/AudioPlayer";
 import bird from "./logos/bird.svg";
 import rain from "./logos/rain.svg";
-import crickets from "./logos/crickets.svg";
+// import crickets from "./logos/crickets.svg";
 import fire from "./logos/fire.svg";
 import people from "./logos/people.svg";
 import thunder from "./logos/thunder.svg";
