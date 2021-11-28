@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <div className=" container audios_wrapper">
+      <div className=" audios_wrapper">
         <body className="audios row">
           <AudioPlayer
             src={

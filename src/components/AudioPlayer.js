@@ -21,7 +21,11 @@ const AudioPlayer = ({ src, Icon }) => {
   };
 
   return (
-    <div className="audio-player col-6 col-sm-6 col-md-4 col-xl-3">
+    <div
+      className={`audio-player col-6 col-sm-6 col-md-4 col-lg-3 ${
+        isplaying ? "pause" : "play"
+      }`}
+    >
       <audio
         controls="controls"
         preload="none"
